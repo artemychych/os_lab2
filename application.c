@@ -14,7 +14,7 @@ int main()
 {
         int fd;
         int32_t number;
-        printf("***Innokentev Artem Lab 2 OS********\n");
+        printf("***Innokentev Artem Lab 2 OS***\n");
      
  
         printf("\nOpening Driver\n");
@@ -30,7 +30,7 @@ int main()
         ioctl(fd, WR_VALUE, (int32_t*) &number); 
  
         char outbuf[4096];
-        ioctl(fd, RD_VALUE _IOR, outbuf);
+        ioctl(fd, RD_VALUE, outbuf);
         puts(outbuf);
 
         close(fd);
